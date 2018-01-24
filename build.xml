@@ -23,6 +23,9 @@
   <condition property="is_mac">
     <os family="mac"/>
   </condition>
+  <condition property="is_unix">
+    <os family="unix"/>
+  </condition>
   <condition property="is_windows">
     <os family="windows"/>
   </condition>
@@ -31,10 +34,10 @@
           description="Remove generated artifacts for a clean build environment">
     <delete quiet="true">
       <fileset dir="website/inc">
-	<filename name="banner.inc"/>
-	<filename name="generated-version.inc"/>
-	<filename name="generated-build-date.inc"/>
-	<filename name="generated-commit-hash.inc"/>
+	      <filename name="banner.inc"/>
+	      <filename name="generated-version.inc"/>
+	      <filename name="generated-build-date.inc"/>
+	      <filename name="generated-commit-hash.inc"/>
       </fileset>
     </delete>
     <ant dir="${timer-dir}" target="clean"/>
